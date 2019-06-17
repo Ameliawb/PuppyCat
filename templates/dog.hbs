@@ -1,0 +1,13 @@
+<html>
+  <head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Dog: {{ name }}</title>
+  </head>
+  <body>
+    <h1>{{ name }}</h1>
+    {{#if image }}
+      <img style="float:right" src="http:{{ image.fields.file.url }}" alt="Picture of {{ name }}"/>
+    {{/if}}
+    <p>{{ description }}</p>
+  </body>
+</html>

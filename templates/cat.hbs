@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Cat:{{name}}</title>
+</head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <h1>Hi</h1>
+    {{#if image}}
+      <img style="float:right" src="http:{{image.fields.file.url}}" alt="Picture of{{name}}" />
+    {{/if}}
+    <p>
+    My name is {{name}} and I like {{likes}}.
+    
+    {{#if lives}}
+      I'm pretty adventurous, since I still have {{lives}} lives.
+    {{/if}}
+
+    {{!-- {{comment: go to the best friend sys id because that is how it is named the js in the gitem function renders our the html using the id name of the files}} --}}
+
+    {{#if bestFriend}}
+    My best friend is <a href="{{bestFriend.sys.id}}.html">{{bestFriend.fields.name}}</a>
+    {{/if}}
+  </p>
+</body>
+</html>

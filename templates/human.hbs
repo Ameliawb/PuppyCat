@@ -1,0 +1,16 @@
+<html>
+<link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <title>Human: {{ name }}</title>
+  </head>
+  <body>
+    <h1>Hi</h1>
+    {{#if entry.image }}
+      <img style="float:right" src="http:{{ image.fields.file.url }}" alt="Picture of {{ name }}"/>
+    {{/if}}
+    <p>
+    My name is {{ name }} and I like {{ likes }}.</p>
+
+    <p>{{ description }}</p>
+  </body>
+</html>
